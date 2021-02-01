@@ -20,7 +20,9 @@
   }
 
   .item {
-    border-right: solid black;
+  }
+  #more{
+    display: none;
   }
 </style>
 
@@ -61,8 +63,6 @@
 
     <!-- Header -->
     <header id="portfolio">
-      <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
-          class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
       <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
           class="fa fa-bars"></i></span>
       <div class="w3-container">
@@ -129,17 +129,40 @@
         </div>
 
       </div>
-      <div class="w3-third w3-container w3-margin-bottom item">
-        <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+
+      <div class="w3-third w3-container w3-margin-bottom item slide-container">
+
+        <div class="slideGi fade">
+
+          <img src="resources/gi/img1.png" style="width:100%" class="w3-hover-opacity">
+
+        </div>
+
+        <div class="slideGi fade">
+
+          <img src="resources/gi/img2.png" style="width:100%" class="w3-hover-opacity">
+
+        </div>
         <div class="w3-container w3-white">
+
           <p><b>Gestión de equipo</b></p>
           <p>
-            This project was created with the purpose of put order in a computer repair station. it saves all the information about every single machine, their owner, and the reason why is in the repair station. it also creates a report with the solution, the issue of the computer and who was the repairman
+            This project was created with the purpose of<span id="dots">...</span><span id="more">put order in a computer repair station. it saves all the information about every single machine, their owner, and the reason why is in the repair station. it also creates a report with the solution, the issue of the computer and who was the repairman</span> 
+            </p>
+            <button id="btnTxt" onclick="readM()">Read more</button>
+          <p>
+            Languages used:
+            <ul>
+              <li>PHP</li>
+              <li>HTML5</li>
+              <li>Mysql</li>
+              <li>Javascript</li>
+              <li>Python 3</li>
+            </ul>
           </p>
         </div>
       </div>
       <div class="w3-third w3-container item">
-        <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Lorem Ipsum</b></p>
           <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue
@@ -271,6 +294,7 @@
   </script>
 
   <script src="js/slides.js"></script>
+  <script src="js/text.js"></script>
 
 </body>
 
